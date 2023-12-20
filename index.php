@@ -1,12 +1,13 @@
 <?php
 
-//Loopings - For
+//Loopings - While
 
 $names = ['Carlos', 'Luana', 'Joao'];
-//resgatar os valores utilizando for
+//resgatar os valores utilizando While
 
-//O for efetua o lopping e pós incrementa
-
-for ($i=0; $i < count($names); $i++) { 
-   echo $names[$i].'<br>';
+//O While efetua o lopping enquanto for verdadeiro
+$i = 0;
+while ($i < count($names)) {
+    echo $names[$i].'<br>';
+    $i++;
 }
