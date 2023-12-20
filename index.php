@@ -1,28 +1,8 @@
 <?php
-//Constantes não altera o valor
-define("NAME", 'Davi');
+//POnto e virgula é sempre informado no final de uma instrução
 
-echo NAME;
+$name = 'Davi';
 
-//Constantes pré definidas do PHP
-function teste()
-{
-    echo __FUNCTION__; //Contante mágica, pois pega o nome da função
+if($name === 'Davi'){
+    echo 'É Davi';
 }
-
-teste();
-
-echo DIRECTORY_SEPARATOR;
-
-
-//Verificar se uma constante está definida ou não
-define('LASTNAME', 'Bernardo');
-
-if(defined('LASTNAME')){
-    echo 'Foi definido';
-}
-
-//Pegar todas as constrantes que o PHP tem
-$cons = get_defined_constants(true);
-
-var_dump($cons);
