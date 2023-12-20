@@ -5,9 +5,10 @@
 $names = ['Carlos', 'Luana', 'Joao'];
 //resgatar os valores utilizando While
 
-//O While efetua o lopping enquanto for verdadeiro
+//O Do While efetua o lopping (faça enquanto) for verdadeiro
+
 $i = 0;
-while ($i < count($names)) {
+do {
     echo $names[$i].'<br>';
     $i++;
-}
+} while ($i < count($names));
