@@ -1,15 +1,33 @@
 <?php
 
-//operadores de comparacao
+//operadores lógicos
 
-$result = 30 == 50; //verifica se o valor é igual
-$result = 30 < 50;
-$result = 30 <= 50;
-$result = 30 > 50;
-$result = 30 >= 50;
-$result = 30 != 50; //Verifica se o valor é diferente
-$result = 30 === 50; //verifica se o valor é igual e o tipo é igual
-$result = 30 !== 50;//verfica se o valor é diferente ou tipo e diferente
+// &&(and),||(or), !
+
+// $canAccess = true;
+// $isOlder = false;
+// $result = $canAccess && $isOlder;  //false
+
+// $canAccess = true;
+// $isOlder = true;
+// $result = $canAccess && $isOlder;  //true
+
+// $canAccess = false;
+// $isOlder = false;
+// $result = $canAccess && $isOlder;  //false
+
+// $canAccess = true;
+// $isOlder = true;
+// $result = $canAccess || $isOlder;  //true
+
+// $canAccess = true;
+// $isOlder = false;
+// $result = $canAccess || $isOlder;  //true
+
+$canAccess = false;
+$isOlder = false;
+$result = $canAccess || $isOlder;  //false
+
 
 
 var_dump($result);
