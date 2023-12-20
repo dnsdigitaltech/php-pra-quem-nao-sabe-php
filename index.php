@@ -1,17 +1,31 @@
 <?php
 
-//Funçoes - reaproveitamento de códigos
+//Closures - são função anônimas
 
-function connection(){
-    $pdo = new PDO('mysql:host=localhost;dbname=ATESTE','root','12345678');
-    return $pdo;
+//Atribuir um função anônima(sem nome) para variável person
+$person = function($name){ //Não chamar mais de função anonima e sim de Closure
+    return $name;
+};
+
+//passando conteúdo para via parametro
+var_dump($person('Davi'));
+
+
+
+function teste($name){
+    $person = function() use($name){
+        return $name;
+    };
+    return $person;
 }
+var_dump(teste('Bernardo')());
 
-function getData($table){
-    $conection = connection();
-    $query = $conection->query("SELECT * FROM {$table}");
-    $query->execute();
-    return $query->fetchAll();
-}
 
-var_dump(getData('candidatos'));
+// class person
+// {
+//     public function __invoke() {
+//         return 'teste';
+//     }
+// }
+
+// $person = new person;
