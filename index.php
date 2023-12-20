@@ -1,31 +1,28 @@
 <?php
-//Variaveis PHP temos:
+//Constantes não altera o valor
+define("NAME", 'Davi');
 
-//string
-echo gettype('kkkkk'). '<br>';
+echo NAME;
 
-//numbers - integers, float(double)
-echo gettype(12). '<br>';
-echo gettype(12.3). '<br>';
-
-//booleans
-echo gettype(false). '<br>';
-
-//arrays
-echo gettype(['kjshkjsdf', 12]). '<br>';
-
-//objects
-class Person{
-
+//Constantes pré definidas do PHP
+function teste()
+{
+    echo __FUNCTION__; //Contante mágica, pois pega o nome da função
 }
-echo gettype(new Person). '<br>';
 
-//null
-echo gettype(null). '<br>';
+teste();
 
-//Criando variável
+echo DIRECTORY_SEPARATOR;
 
-$name = 'Davi';
-echo $name. '<br>';
-echo gettype($name). '<br>';
-?>
+
+//Verificar se uma constante está definida ou não
+define('LASTNAME', 'Bernardo');
+
+if(defined('LASTNAME')){
+    echo 'Foi definido';
+}
+
+//Pegar todas as constrantes que o PHP tem
+$cons = get_defined_constants(true);
+
+var_dump($cons);
