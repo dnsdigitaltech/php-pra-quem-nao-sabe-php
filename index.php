@@ -1,23 +1,26 @@
 <?php
 
-//Strings - Tudo que estiver dentro de aspas simples '' ou duplas "" é considerado strings
-$age = 39;
+//Numbers - temos basicamente dois tipos de numeros (inteiros, não inteiros)
 
-//$nome = 'Davi';
+//34 integer
+//34.5 double
 
-//OBS quando for usar um variável dentro de uma string é necessário usar aspas duplas
+echo gettype(34);
 
-$nome = "Davi {$age} teste";
-echo $nome;
+echo gettype(34.5);
 
-echo gettype($nome);
+//Calculos aritiméticos
+$number1 = '34';
+$number2 = 44;
+echo $number1 + 50; //Ao contrário do java script o php consegue interpretar o numera da string  e efetuar calculos
 
-echo strlen($nome); //mostra total de caracteres
+//verificando se a variavel é número ou não
+if(is_numeric($number1) && is_numeric($number2)){
+    echo 'É numerico';
+}else{
+    echo 'Não é numerico';
+}
 
-echo substr($nome, 0, 6); //corta a string
-
-echo str_contains($nome, 'teste'); //se contem alguma coisa na string
-
-
-
-
+//Arredondar um numero
+echo ceil(34.12); //arredonda para cima
+echo floor(34.12); //arredonda para baixo
