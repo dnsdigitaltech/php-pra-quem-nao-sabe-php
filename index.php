@@ -1,43 +1,48 @@
 <?php
 
-//Arrays
-//$nome = 'Davi'; //Quando desejar guardar mais de um valor dentro de uma variaáve é necessário criar o array()[]
+//Convertendo tipos de dados
+//(string)
+//(boolean)
+//(float)
+//(integer)
+//(double)
+//(object)
+//(array)
+//intVal
+//floatVal
+//doubleVal
+//strVal
+//boolVal
 
-$data = ['Davi', 'Nathan', 'silvia', 39, true, false];
+$name = 'Davi';
+//$name = '';false
+$number = 35;
+//converter para boolean
+$change = (boolean) $name;
+$change = boolVal($name);//este método é outra forma de chamar mais o resultado é o mesmo
+$number = (string) $number;
+var_dump($change, $number);
 
-//resgatar as valores
-print_r($data);
+//OBS para converter oa valores basta colocar o tipo do dado antes da variavel
 
-var_dump($data);//trás os tipos
+//Transformar array em object
+$nomes = ['name' => 'Davi', 'age' => 39];
 
-//resgatando um valor especifico
-var_dump($data[1]);
+$object = (object) $nomes;
+var_dump($object);
 
-//adicionando valores no array
-$data['6'] ='Avelina';
-var_dump($data);
+//recuperar objeto
+var_dump($object->name);
 
-//Adicionando novos itens sempre no final do array
-$length = count($data);
-$data[$length] ='Severino';
+//Transformar objects e array
+class Person{
+    private $name;
+    public function teste() {
+        return 'teste';
+    }
+}
 
-var_dump($data);
+$person = new Person;
 
-//Outra forma de adcionar itens no final do array é com a função array_push()
-array_push($data, 'teste');
-var_dump($data);
-
-//adicionar no começo do array
-/*$data['0'] ='first';//nesse caso substituiu o primeiro item do array
-var_dump($data);*/
-
-//para adicionar no inicio do array é necessário usar a função array_unshift();
-array_unshift($data, 'first');
-var_dump($data);
-
-//Criando indices específicos
-$person = ['name' => 'Davi', 'age' => 38, 'documents' => ['cpf' => '465465465', 'rg' => '231232131']];
-//resgatando os valores
-var_dump($person);
-var_dump($person['name']);
-var_dump($person['documents']['cpf']);
+$array = (array) $person;
+var_dump($array);
