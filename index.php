@@ -1,14 +1,12 @@
 <?php
 
-//Loopings - While
+//Loopings - Foreach
 
 $names = ['Carlos', 'Luana', 'Joao'];
-//resgatar os valores utilizando While
+//resgatar os valores utilizando Foreach
 
-//O Do While efetua o lopping (faça enquanto) for verdadeiro
+//O Foreach significa para cada item do array vai ser guardado na variavel
 
-$i = 0;
-do {
-    echo $names[$i].'<br>';
-    $i++;
-} while ($i < count($names));
+foreach ($names as $key => $name) {
+    echo $key . '=>' . $name;
+}
