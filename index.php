@@ -1,13 +1,15 @@
 <?php
 
-//operadores incremento/decremento
+//operadores de comparacao
 
-$number = 10;
+$result = 30 == 50;
+$result = 30 < 50;
+$result = 30 <= 50;
+$result = 30 > 50;
+$result = 30 >= 50;
+$result = 30 != 50; //Verifica se o valor e diferente
+$result = 30 === 50;
+$result = 30 !== 50;//verfica se o valor é diferente ou tipo e diferente
 
-echo ++$number .'<br>';//pre incremento
 
-echo $number++ .'<br>';//pos incremento
-
-echo --$number .'<br>';//pre decremento
-
-echo $number-- .'<br>';//pos decremento
+var_dump($result);
