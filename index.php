@@ -1,25 +1,13 @@
 <?php
 
-//operadores de atribuicao
+//operadores incremento/decremento
 
-$name = 'Davi';
-
-$name = $name . ' Bernardo';
-
-echo $name;
-
-//forma mais simples
-$name .= 'Bernardo';
-
-echo $name;
-
-//operadores de atribuicao com operadores aritmeticos
 $number = 10;
 
-$number += 20;
-$number *= 20;
-$number /= 20;
-$number -= 20;
-$number %= 20;
+echo ++$number .'<br>';//pre incremento
 
-echo $number;
+echo $number++ .'<br>';//pos incremento
+
+echo --$number .'<br>';//pre decremento
+
+echo $number-- .'<br>';//pos decremento
