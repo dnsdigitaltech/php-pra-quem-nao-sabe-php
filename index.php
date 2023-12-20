@@ -1,19 +1,24 @@
 <?php
 
-//Condicionais - if-else
-$isAdmin = true;
+//Condicionais - Switch
+//O switch verifica o valor o if verifica se é verdadeiro ou falso
 
-if($isAdmin){
-    echo 'isAdmin ';
-}
+$name = 'Davi';
 
-$number1 = 70;
-$number2 = 30;
-
-if($number1 > $number2){
-    echo 'É Maior';
-}elseif($number1 == $number2){
-    echo 'É Igual';
-}else{
-    echo 'Nenhum';
+switch($name){
+    case 'Davi':
+        echo 'É Davi';
+        break;
+    case 'Silvia':
+        echo 'É Silvia';
+        break;
+    case 'Nathan':
+        echo 'É Nathan';
+        break;
+    case 'Avelina':
+        echo 'É Avelina';
+        break;
+    default:
+        echo 'Não é nenhum';
+        break;
 }
