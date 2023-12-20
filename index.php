@@ -1,30 +1,19 @@
 <?php
 
-//Truthy e Falsy
+//Condicionais - if-else
+$isAdmin = true;
 
-//Falsy
-//null..............//.null
-//0.................//.integer
-//0.0...............//.float
-//"0"...............//.string
-//""...............//.empty.string
-//.array()..........//.empty.array
-
-//Truthy - Todo resto
-
-
-var_dump(!!null);//false
-var_dump(!!0);//false
-var_dump(!!0.0);//false
-var_dump(!!"0");//false
-var_dump(!!"");//false
-var_dump(!!array());//false
-var_dump(!![]);//false
-
-if(0){
-    echo 'teste'; //Não aparece nada
+if($isAdmin){
+    echo 'isAdmin ';
 }
 
-if(!0){
-    echo 'teste'; //aparece
+$number1 = 70;
+$number2 = 30;
+
+if($number1 > $number2){
+    echo 'É Maior';
+}elseif($number1 == $number2){
+    echo 'É Igual';
+}else{
+    echo 'Nenhum';
 }
