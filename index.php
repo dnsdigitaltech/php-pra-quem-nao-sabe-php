@@ -1,26 +1,43 @@
 <?php
 
-//Numbers - temos basicamente dois tipos de numeros (inteiros, não inteiros)
+//Arrays
+//$nome = 'Davi'; //Quando desejar guardar mais de um valor dentro de uma variaáve é necessário criar o array()[]
 
-//34 integer
-//34.5 double
+$data = ['Davi', 'Nathan', 'silvia', 39, true, false];
 
-echo gettype(34);
+//resgatar as valores
+print_r($data);
 
-echo gettype(34.5);
+var_dump($data);//trás os tipos
 
-//Calculos aritiméticos
-$number1 = '34';
-$number2 = 44;
-echo $number1 + 50; //Ao contrário do java script o php consegue interpretar o numera da string  e efetuar calculos
+//resgatando um valor especifico
+var_dump($data[1]);
 
-//verificando se a variavel é número ou não
-if(is_numeric($number1) && is_numeric($number2)){
-    echo 'É numerico';
-}else{
-    echo 'Não é numerico';
-}
+//adicionando valores no array
+$data['6'] ='Avelina';
+var_dump($data);
 
-//Arredondar um numero
-echo ceil(34.12); //arredonda para cima
-echo floor(34.12); //arredonda para baixo
+//Adicionando novos itens sempre no final do array
+$length = count($data);
+$data[$length] ='Severino';
+
+var_dump($data);
+
+//Outra forma de adcionar itens no final do array é com a função array_push()
+array_push($data, 'teste');
+var_dump($data);
+
+//adicionar no começo do array
+/*$data['0'] ='first';//nesse caso substituiu o primeiro item do array
+var_dump($data);*/
+
+//para adicionar no inicio do array é necessário usar a função array_unshift();
+array_unshift($data, 'first');
+var_dump($data);
+
+//Criando indices específicos
+$person = ['name' => 'Davi', 'age' => 38, 'documents' => ['cpf' => '465465465', 'rg' => '231232131']];
+//resgatando os valores
+var_dump($person);
+var_dump($person['name']);
+var_dump($person['documents']['cpf']);
