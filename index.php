@@ -1,33 +1,30 @@
 <?php
 
-//operadores lógicos
+//Truthy e Falsy
 
-// &&(and),||(or), !
+//Falsy
+//null..............//.null
+//0.................//.integer
+//0.0...............//.float
+//"0"...............//.string
+//""...............//.empty.string
+//.array()..........//.empty.array
 
-// $canAccess = true;
-// $isOlder = false;
-// $result = $canAccess && $isOlder;  //false
-
-// $canAccess = true;
-// $isOlder = true;
-// $result = $canAccess && $isOlder;  //true
-
-// $canAccess = false;
-// $isOlder = false;
-// $result = $canAccess && $isOlder;  //false
-
-// $canAccess = true;
-// $isOlder = true;
-// $result = $canAccess || $isOlder;  //true
-
-// $canAccess = true;
-// $isOlder = false;
-// $result = $canAccess || $isOlder;  //true
-
-$canAccess = false;
-$isOlder = false;
-$result = $canAccess || $isOlder;  //false
+//Truthy - Todo resto
 
 
+var_dump(!!null);//false
+var_dump(!!0);//false
+var_dump(!!0.0);//false
+var_dump(!!"0");//false
+var_dump(!!"");//false
+var_dump(!!array());//false
+var_dump(!![]);//false
 
-var_dump($result);
+if(0){
+    echo 'teste'; //Não aparece nada
+}
+
+if(!0){
+    echo 'teste'; //aparece
+}
