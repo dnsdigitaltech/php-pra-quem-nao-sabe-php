@@ -1,24 +1,25 @@
 <?php
 
-$number1 = 23;
-$number2 = 10;
+//operadores de atribuicao
 
-//soma
-echo 'soma: '. $number1 + $number2. '<br/>';
+$name = 'Davi';
 
-//subtracao
-echo 'subtracao: '. $number1 - $number2. '<br/>';
+$name = $name . ' Bernardo';
 
-//multiplicacao
-echo 'multiplicacao: '. $number1 * $number2. '<br/>';
+echo $name;
 
-//divisao
-echo 'divisao: '. $number1 / $number2. '<br/>';
+//forma mais simples
+$name .= 'Bernardo';
 
-//resto
-echo 'resto: '. $number1 % $number2. '<br/>';
+echo $name;
 
-//mais de uma operacao
-$opercao = $number1 * $number2 + 5;
+//operadores de atribuicao com operadores aritmeticos
+$number = 10;
 
-echo $opercao;
+$number += 20;
+$number *= 20;
+$number /= 20;
+$number -= 20;
+$number %= 20;
+
+echo $number;
