@@ -1,11 +1,17 @@
 <?php
 
-//Cookies
+//Session
+//session_start() - sempre quando for criar a sessão
+session_start();
+//resgatando o id da sessão
+echo session_id();
+$_SESSION['name'] = 'Davi';
 
-//setcookie() - serve para criar o cookie
-setcookie('name', 'Davi', time() + 2 * 24 * 60 * 60);//2dias
+//OBS: para excluir a sessão basta fechar o navegador ou excluir manualmente
+//Para acluir um item na sessão basta usar a função unset()
+//unset($_SESSION['name']);
 
-//setcookie('curso', 'php', strtotime('+5days'));//5dias
+//session_destroy() - exclui toda a sessão
+session_destroy();
 
-//para excluir o cookie basta colocar -5dias
-setcookie('curso', 'php', strtotime('-5days'));//5dias
+include './teste.php';

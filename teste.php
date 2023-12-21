@@ -1,7 +1,5 @@
 <?php
-//resgatando o cookie
-if(isset($_COOKIE['curso'])){
-    echo $_COOKIE['curso'];
-}else{
-    echo 'Cookie não existe';
-}
+//sempre quando for resgatar uma sessão tem que iniciar
+session_start();
+//resgatando a sessão
+echo isset($_SESSION['name']) ? $_SESSION['name'] :'Sessão não existe'; //operador ternário
