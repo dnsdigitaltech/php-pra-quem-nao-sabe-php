@@ -1,12 +1,19 @@
 <?php
 
-//Verificando se a variável existe
+//Escopo e variável global
+
+//global - é em todo script
+//local - dentro de uma função
 
 $name = 'Davi';
 
-echo isset($name);
+function person(){
+    //global $name;
+    //echo $name;
 
-$person = ['name' => 'Davi', 'age' => 39];
-echo isset($person['name']);
-// 1 = thruty
-// 0 = falsy
+    //OU
+
+    echo $GLOBALS['name'];
+}
+
+person();
