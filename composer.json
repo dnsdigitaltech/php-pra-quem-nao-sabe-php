@@ -1,0 +1,17 @@
+{
+    "name": "developer/php-pra-quem-nao-sabe-php",
+    "autoload": {
+        "psr-4": {
+            "Developer\\PhpPraQuemNaoSabePhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Davi Bernardo",
+            "email": "davi.bernardo@sbahq.org"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
