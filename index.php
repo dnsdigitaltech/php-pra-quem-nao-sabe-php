@@ -1,4 +1,3 @@
-<!--arquivos-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,8 +7,9 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <form action="teste.php" method="get" enctype="multipart/form-data">
-            <input type="file" name="img" value="">
+        <form action="teste.php" method="post">
+            <input type="text" name="name" value="" placeholder="Seu nome">
+            <input type="email" name="email" value="" placeholder="Seu e-mail">
             <button type="submit">Cadastrar</button>
         </form>
     </body>
